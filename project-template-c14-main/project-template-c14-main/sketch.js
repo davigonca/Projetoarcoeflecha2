@@ -71,10 +71,7 @@ if (arrowGroup.isTouching(redBalloon)){
   arrowGroup.destroyEach();
   //gameState = ENCERRAR;
 }
-if (gameState ===ENCERRAR){
-  bow.destroy();
-  scene.velocityX = 0;
-}
+
 if (arrowGroup.isTouching(greenGroup)){
   arrowGroup.destroyEach();
   greenGroup.destroyEach();
@@ -98,7 +95,10 @@ pontos = pontos+2;
 
 }
 
- 
+if (gameState ===ENCERRAR){
+  bow.destroy();
+  scene.velocityX = 0;
+}
  
  
   
